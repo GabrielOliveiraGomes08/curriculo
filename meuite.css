@@ -1,0 +1,223 @@
+/* ===== GERAL ===== */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;  
+  scroll-padding-top: 80px; 
+}
+
+body {
+  margin: 0;
+  background-color: #0b0d12;  
+  color: #e6e6e6;             
+  font-family: 'Poppins', Arial, sans-serif; 
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+a {
+  color: #00d9ff;             
+}
+
+a:hover {
+  color: #ffffff;
+}
+
+/* ===== FONTE DOS TÍTULOS ===== */
+h1, h2, h3, nav a {
+  font-family: 'Orbitron', Arial, sans-serif;
+}
+
+/* ===== MENU FIXO NO TOPO ===== */
+nav {
+  position: fixed;            
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  display: flex;              
+  justify-content: center;
+  gap: 10px;
+  padding: 10px;
+  background-color: #0b0d12;
+  border-bottom: 2px solid #00d9ff;              
+  box-shadow: 0 2px 12px rgba(0, 217, 255, 0.4); 
+}
+
+nav a {
+  color: #e6e6e6;
+  text-decoration: none;
+  padding: 10px 22px;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  color: #00d9ff;
+  background-color: #151a24;
+}
+
+/* ===== TOPO ===== */
+header {
+  text-align: center;
+  padding: 110px 20px 20px 20px;
+}
+
+
+header h1 {
+  font-size: 35px;
+  margin: 0 0 5px 0;
+  color: #00d9ff;
+  text-shadow: 0 0 12px rgba(0, 217, 255, 0.5);
+}
+
+header p {
+  color: #b0b0b0;
+  margin: 0;
+}
+
+
+/* ===== SEÇÕES ===== */
+main {
+  max-width: 900px;           
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 20px 0 5px 0;
+}
+
+h2 {
+  font-size: 24px;
+  color: #00d9ff;
+  border-bottom: 1px solid #2a3140;
+  padding-bottom: 6px;
+  margin: 0 0 12px 0;
+}
+
+h3 {
+  margin: 12px 0 4px 0;
+  font-size: 18px;
+}
+
+p {
+  margin: 0 0 10px 0;
+}
+
+.cartao {
+  margin-bottom: 15px;
+}
+
+/* ===== GALERIA COM SETAS ===== */
+.galeria input {
+  display: none;              
+}
+
+.slide {
+  display: none;              
+  position: relative;         
+  margin-top: 15px;
+}
+
+#foto1:checked ~ .slide1,
+#foto2:checked ~ .slide2,
+#foto3:checked ~ .slide3,
+#foto4:checked ~ .slide4 {
+  display: block;
+}
+
+.slide img {
+  width: 100%;
+  height: 450px;              
+  object-fit: cover;          
+  border-radius: 6px;
+  background-color: #1a1f2b;
+}
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  font-size: 22px;
+  color: #00d9ff;
+  background-color: rgba(11, 13, 18, 0.7);
+  border: 2px solid #00d9ff;
+  border-radius: 50%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.seta:hover {
+  background-color: #00d9ff;
+  color: #0b0d12;
+}
+
+.esquerda {
+  left: 12px;
+}
+
+.direita {
+  right: 12px;
+}
+
+/* ===== HABILIDADES ===== */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 10px 0;
+  display: flex;
+  flex-wrap: wrap;             
+  gap: 8px;
+}
+
+li {
+  border: 1px solid #00d9ff;
+  border-radius: 20px;
+  padding: 2px 14px;
+}
+
+/* ===== RODAPÉ ===== */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 20px;
+  color: #888;
+  border-top: 1px solid #2a3140;
+}
+
+/* ===== CELULAR ===== */
+@media (max-width: 800px) {
+  nav {
+    flex-wrap: wrap;           
+    gap: 0;
+    padding: 6px 4px;
+  }
+
+  nav a {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+
+  header {
+    padding-top: 120px;
+  }
+
+  header h1 {
+    font-size: 26px;
+  }
+
+  html {
+    scroll-padding-top: 110px;
+  }
+
+  .slide img {
+    height: 260px;
+  }
+}
